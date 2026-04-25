@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reserva | Aula Canina</title>
+  <meta name="description" content="Página de reserva de servicios de Aula Canina.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/reserva.css">
+</head>
+
+<body>
+  <header class="encabezado">
+    <div class="contenedor contenedor-nav">
+      <a href="../index.html" class="logo">
+        <span class="icono-logo">🐾</span>
+        <span>Aula Canina</span>
+      </a>
+
+      <nav class="menu-navegacion">
+        <ul class="lista-nav">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a href="../index.html#sobre-nosotros">Sobre nosotros</a></li>
+          <li><a href="../index.html#galeria">Galería</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>  
+        </ul>
+      </nav>
+
+      <a href="reserva.html" class="boton boton-principal boton-nav">Reservar</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="cabecera-reserva">
+      <img 
+        src="../img/Yuri.webp" 
+        alt="Perro de Aula Canina" 
+        class="imagen-cabecera-reserva"
+      >
+
+      <div class="contenedor">
+        <p class="etiqueta-seccion">Reserva online</p>
+        <h1>Reserva una sesión para tu perro</h1>
+        <p class="texto-cabecera-reserva">
+          Completa este formulario y nos pondremos en contacto contigo para confirmar
+          la disponibilidad del servicio elegido.
+        </p>
+      </div>
+    </section>
+
+    <section class="seccion-clara">
+      <div class="contenedor cuadricula-reserva">
+        <div class="info-reserva">
+          <div class="tarjeta-info-reserva">
+            <h2>¿Cómo funciona?</h2>
+            <p>
+              Rellena tus datos, elige el servicio que te interesa y dinos cuándo te
+              vendría mejor. Después te confirmaremos la cita por teléfono o correo.
+            </p>
+          </div>
+
+          <div class="tarjeta-info-reserva">
+            <h3>Servicios disponibles</h3>
+            <ul class="lista-reserva">
+              <li>Educación canina</li>
+              <li>Psicología canina</li>
+              <li>Agility</li>
+              <li>Peluquería canina</li>
+              <li>Bienestar animal</li>
+              <li>Clases grupales</li>
+            </ul>
+          </div>
+
+          <div class="tarjeta-info-reserva">
+            <h3>Horario</h3>
+            <p>Lunes a Viernes: 09:00 - 20:00</p>
+            <p>Sábados: 10:00 - 14:00</p>
+            <p>Domingos: cerrado</p>
+          </div>
+        </div>
+
+        <form class="formulario-reserva">
+          <h2>Datos de la reserva</h2>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required>
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="tuemail@ejemplo.com" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="600 123 456" required>
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="nombre-perro">Nombre del perro</label>
+              <input type="text" id="nombre-perro" name="nombre-perro" placeholder="Nombre de tu perro" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="edad-perro">Edad del perro</label>
+              <input type="text" id="edad-perro" name="edad-perro" placeholder="Ej: 2 años">
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="servicio">Servicio</label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option>Educación canina</option>
+                <option>Psicología canina</option>
+                <option>Agility</option>
+                <option>Peluquería canina</option>
+                <option>Bienestar animal</option>
+                <option>Clases grupales</option>
+              </select>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="fecha">Fecha deseada</label>
+              <input type="date" id="fecha" name="fecha" required>
+            </div>
+          </div>
+
+          <div class="fila-formulario">
+            <div class="grupo-formulario">
+              <label for="hora">Hora preferida</label>
+              <input type="time" id="hora" name="hora" required>
+            </div>
+
+            <div class="grupo-formulario">
+              <label for="tamano">Tamaño del perro</label>
+              <select id="tamano" name="tamano">
+                <option value="">Selecciona una opción</option>
+                <option>Pequeño</option>
+                <option>Mediano</option>
+                <option>Grande</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="mensaje">Observaciones</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntanos si tu perro tiene alguna necesidad especial, comportamiento concreto o cualquier dato importante"></textarea>
+          </div>
+
+          <div class="grupo-check">
+            <input type="checkbox" id="privacidad" name="privacidad" required>
+            <label for="privacidad">
+              He leído y acepto la política de privacidad
+            </label>
+          </div>
+
+          <button type="submit" class="boton boton-principal-estilo boton-ancho">
+            Enviar reserva
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor contenedor-pie">
+      <div>
+        <h3>Aula Canina</h3>
+        <p>Educación, cuidado y bienestar para perros y familias.</p>
+      </div>
+
+      <div>
+        <h4>Enlaces</h4>
+        <ul class="enlaces-pie">
+          <li><a href="../index.html#inicio">Inicio</a></li>
+          <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a href="../index.html#sobre-nosotros">Sobre nosotros</a></li>
+          <li><a href="../index.html#contacto">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p>info@aulacanina.com</p>
+        <p>600 123 456</p>
+      </div>
+    </div>
+
+    <div class="pie-inferior">
+      <p>&copy; 2026 Aula Canina. Caminamos juntos.</p>
+    </div>
+  </footer>
+</body>
+</html>
