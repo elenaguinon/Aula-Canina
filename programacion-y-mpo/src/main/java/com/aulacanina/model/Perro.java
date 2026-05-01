@@ -17,6 +17,12 @@ public class Perro {
         this.idCliente = idCliente;
     }
 
+    public Perro(String nombre, String raza, int idCliente) {
+        this.nombre = nombre;
+        this.raza = raza;
+        this.idCliente = idCliente;
+    }
+
     public int getIdPerro() {
         return idPerro;
     }
@@ -29,28 +35,16 @@ public class Perro {
         return nombre;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
     public String getRaza() {
         return raza;
-    }
-
-    public void setRaza(String raza) {
-        this.raza = raza;
     }
 
     public int getIdCliente() {
         return idCliente;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
     @Override
     public String toString() {
-        return idPerro + " - " + nombre + " (" + raza + ")";
+        return nombre + " - " + raza;
     }
 }
