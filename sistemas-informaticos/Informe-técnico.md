@@ -257,17 +257,20 @@ Muestro las capturas de pantalla mostrando como el funciona el proyecto:
 sistemas-informaticos/evidencias/
 ```
 
-Capturas que se añadirán:
+ Web abierta en navegador 
 
-| Captura                         | Qué demuestra                           |
-| ------------------------------- | --------------------------------------- |
-| XAMPP con MySQL iniciado        | Que el servidor local está funcionando  |
-| phpMyAdmin con la base de datos | Que la base de datos está creada        |
-| Login de la aplicación          | Que la aplicación arranca               |
-| Panel principal                 | Que se puede acceder al sistema         |
-| Pantalla de reservas            | Que la gestión de reservas funciona     |
-| Pantalla de perros              | Que la gestión de perros funciona       |
-| Pantalla de trabajadores        | Que la gestión de trabajadores funciona |
-| Web abierta en navegador        | Que la parte web funciona               |
+ ![Portada Web](/sistemas-informaticos/evidencias/portadaweb.jpg)
+![Reservas Web](/sistemas-informaticos/evidencias/reservaweb.jpg)
 
-Estas capturas servirán como prueba de funcionamiento del entorno.
+XAMPP con MySQL iniciado y BBDD creada
+
+![Xammp y PHPmyAdmin funcionando](/sistemas-informaticos/evidencias/php.jpg)
+
+Login de la aplicación
+![Login aplicación](/sistemas-informaticos/evidencias/login.jpg)
+
+Panel de Gestión
+![Login aplicación](/sistemas-informaticos/evidencias/gestion.jpg)
+
+Panel Reservas
+![Login aplicación](/sistemas-informaticos/evidencias/reservas.jpg)
