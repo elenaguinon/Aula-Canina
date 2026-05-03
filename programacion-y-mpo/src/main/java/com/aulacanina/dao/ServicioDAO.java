@@ -15,8 +15,8 @@ public class ServicioDAO {
         List<Servicio> servicios = new ArrayList<>();
 
         String sql = """
-                SELECT id_Servicio, Nombre, Descripcion, Duracion, Precio, Activo
-                FROM SERVICIO
+                SELECT id_Servicio, nombre, descripcion, duracion, precio, activo
+                FROM servicio
                 WHERE Activo = true
                 ORDER BY Nombre
                 """;
@@ -27,12 +27,12 @@ public class ServicioDAO {
 
             while (rs.next()) {
                 Servicio servicio = new Servicio(
-                        rs.getInt("id_Servicio"),
-                        rs.getString("Nombre"),
-                        rs.getString("Descripcion"),
-                        rs.getInt("Duracion"),
-                        rs.getBigDecimal("Precio"),
-                        rs.getBoolean("Activo")
+                        rs.getInt("id_servicio"),
+                        rs.getString("nombre"),
+                        rs.getString("descripcion"),
+                        rs.getInt("duracion"),
+                        rs.getBigDecimal("precio"),
+                        rs.getBoolean("activo")
                 );
 
                 servicios.add(servicio);

@@ -15,9 +15,9 @@ public class TrabajadorDAO {
         List<Trabajador> trabajadores = new ArrayList<>();
 
         String sql = """
-                SELECT id_Empleado, Nombre, Apellidos, Telefono, Email
-                FROM EMPLEADO
-                ORDER BY Nombre
+                SELECT id_empleado, nombre, apellidos, telefono, Email
+                FROM empleado
+                ORDER BY nombre
                 """;
 
         try (Connection conn = DBConnection.getConnection();
@@ -38,7 +38,7 @@ public class TrabajadorDAO {
 
     public boolean insertarTrabajador(Trabajador trabajador) {
         String sql = """
-                INSERT INTO EMPLEADO (Nombre, Apellidos, Telefono, Email)
+                INSERT INTO empleado (nombre, apellidos, telefono, email)
                 VALUES (?, ?, ?, ?)
                 """;
 

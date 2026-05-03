@@ -17,10 +17,10 @@ public class ReservaDAO {
         List<Reserva> reservas = new ArrayList<>();
 
         String sql = """
-                SELECT id_Reserva, Fecha_Reserva, Fecha_Servicio, Hora_Servicio,
-                       Estado, Observaciones, id_Cliente, id_Perro, id_Empleado, id_Servicio
-                FROM RESERVA
-                ORDER BY Fecha_Servicio DESC, Hora_Servicio DESC
+                SELECT id_reserva, fecha_reserva, fecha_servicio, hora_servicio,
+                       estado, observaciones, id_cliente, id_perro, id_empleado, id_servicio
+                FROM reserva
+                ORDER BY fecha_servicio DESC, hora_servicio DESC
                 """;
 
         try (Connection conn = DBConnection.getConnection();
@@ -29,16 +29,16 @@ public class ReservaDAO {
 
             while (rs.next()) {
                 Reserva reserva = new Reserva(
-                        rs.getInt("id_Reserva"),
-                        rs.getDate("Fecha_Reserva").toLocalDate(),
-                        rs.getDate("Fecha_Servicio").toLocalDate(),
-                        rs.getTime("Hora_Servicio").toLocalTime(),
-                        rs.getString("Estado"),
-                        rs.getString("Observaciones"),
-                        rs.getInt("id_Cliente"),
-                        rs.getInt("id_Perro"),
-                        rs.getInt("id_Empleado"),
-                        rs.getInt("id_Servicio")
+                        rs.getInt("id_reserva"),
+                        rs.getDate("fecha_reserva").toLocalDate(),
+                        rs.getDate("fecha_servicio").toLocalDate(),
+                        rs.getTime("hora_servicio").toLocalTime(),
+                        rs.getString("estado"),
+                        rs.getString("observaciones"),
+                        rs.getInt("id_cliente"),
+                        rs.getInt("id_perro"),
+                        rs.getInt("id_empleado"),
+                        rs.getInt("id_servicio")
                 );
 
                 reservas.add(reserva);
@@ -53,9 +53,9 @@ public class ReservaDAO {
 
     public boolean insertarReserva(Reserva reserva) {
         String sql = """
-                INSERT INTO RESERVA
-                (Fecha_Reserva, Fecha_Servicio, Hora_Servicio, Estado, Observaciones,
-                 id_Cliente, id_Perro, id_Empleado, id_Servicio)
+                INSERT INTO reserva
+                (fecha_reserva, fecha_servicio, hora_servicio, estado, observaciones,
+                 id_cliente, id_perro, id_empleado, id_servicio)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 """;
 
@@ -83,9 +83,9 @@ public class ReservaDAO {
 
     public boolean cancelarReserva(int idReserva) {
         String sql = """
-                UPDATE RESERVA
+                UPDATE reserva
                 SET Estado = 'Cancelada'
-                WHERE id_Reserva = ?
+                WHERE id_reserva = ?
                 """;
 
         try (Connection conn = DBConnection.getConnection();
@@ -104,8 +104,8 @@ public class ReservaDAO {
 
     public boolean eliminarReserva(int idReserva) {
         String sql = """
-                DELETE FROM RESERVA
-                WHERE id_Reserva = ?
+                DELETE FROM reserva
+                WHERE id_reserva = ?
                 """;
 
         try (Connection conn = DBConnection.getConnection();

@@ -26,10 +26,10 @@ public class ClienteDAO {
 
             while (rs.next()) {
                 Cliente cliente = new Cliente(
-                        rs.getInt("id_Cliente"),
-                        rs.getString("Nombre"),
-                        rs.getString("Apellidos"),
-                        rs.getString("Telefono"),
+                        rs.getInt("id_cliente"),
+                        rs.getString("nombre"),
+                        rs.getString("apellidos"),
+                        rs.getString("telefono"),
                         rs.getString("email")
                 );
 

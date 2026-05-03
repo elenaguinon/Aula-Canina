@@ -15,9 +15,9 @@ public class PerroDAO {
         List<Perro> perros = new ArrayList<>();
 
         String sql = """
-                SELECT id_Perro, Nombre, Raza, id_Cliente
-                FROM PERRO
-                ORDER BY Nombre
+                SELECT id_perro, nombre, raza, id_cliente
+                FROM perro
+                ORDER BY nombre
                 """;
 
         try (Connection conn = DBConnection.getConnection();
@@ -108,7 +108,7 @@ public class PerroDAO {
 
     public boolean insertarPerro(Perro perro) {
         String sql = """
-                INSERT INTO PERRO (nombre, raza, id_cliente)
+                INSERT INTO perro (nombre, raza, id_cliente)
                 VALUES (?, ?, ?)
                 """;
 
@@ -129,7 +129,7 @@ public class PerroDAO {
 
     public boolean eliminarPerro(int idPerro) {
         String sql = """
-                DELETE FROM PERRO
+                DELETE FROM perro
                 WHERE id_perro = ?
                 """;
 
