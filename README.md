@@ -83,9 +83,10 @@ Las tecnologías previstas para el proyecto son:
 
 ---
 
-## 8. Estructura inicial del repositorio
+## 8. Estructura del repositorio
 
-La estructura inicial del repositorio estará organizada por módulos.
+El repositorio está organizado por módulos.  
+Dentro de cada carpeta se incluye un README con una breve explicación del trabajo realizado y aspectos importantes a tener en cuenta.
 
 ```text
 aula-canina/
