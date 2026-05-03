@@ -220,17 +220,14 @@ Hay que comprobar que:
 
 ### Qué hacer si falla
 
-Si algo falla, seguiría estos pasos:
-
-1. Leer el mensaje de error.
-2. Comprobar que XAMPP está abierto.
-3. Comprobar que MySQL está iniciado.
-4. Revisar el nombre de la base de datos.
-5. Revisar usuario y contraseña en `DBConnection.java`.
-6. Comprobar que las tablas y columnas existen.
-7. Revisar si el conector JDBC está bien añadido.
-8. Mirar los últimos cambios hechos en Git.
-9. Arreglar el error y hacer un nuevo commit.
+1. Comprobar que XAMPP está abierto.
+2. Comprobar que MySQL está iniciado.
+3. Revisar el nombre de la base de datos.
+4. Revisar usuario y contraseña en `DBConnection.java`.
+5. Comprobar que las tablas y columnas existen.
+6. Revisar si el conector JDBC está bien añadido.
+7. Mirar los últimos cambios hechos en Git.
+8. Arreglar el error y hacer un nuevo commit.
 
 ---
 
@@ -241,7 +238,7 @@ Aunque es un proyecto académico, se aplicarán medidas básicas de seguridad.
 Medidas que se tendrán en cuenta:
 
 * Usar login de administrador en la aplicación JavaFX.
-* No usar datos reales de personas ni de mascotas.
+* No usar datos sensibles reales.
 * No subir contraseñas reales al repositorio.
 * Hacer copias de seguridad de la base de datos.
 * Mantener ordenado el repositorio de GitHub.
@@ -254,7 +251,7 @@ Los datos usados en el proyecto serán ficticios. Esto evita problemas de privac
 
 ## Evidencias
 
-Para demostrar que el proyecto se ejecuta, arranca y funciona, se añadirán capturas en la carpeta:
+Muestro las capturas de pantalla mostrando como el funciona el proyecto:
 
 ```text
 sistemas-informaticos/evidencias/

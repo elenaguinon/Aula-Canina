@@ -219,6 +219,7 @@ ul {
   align-items: center;
   color: var(--color-blanco);
   overflow: hidden;
+  width: auto;
 }
 
 .imagen-principal {
